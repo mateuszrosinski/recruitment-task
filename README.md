@@ -19,6 +19,7 @@ Wymagania potrzebne do korzystania z aplikacji:
 Aby uruchomić aplikację, upewnij się, że masz zainstalowane:
 
 Python 3.9+
+sprawdź swoją wersje:
 ```python
 python --version
 ```
