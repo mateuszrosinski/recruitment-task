@@ -19,7 +19,11 @@ Wymagania potrzebne do korzystania z aplikacji:
 Aby uruchomić aplikację, upewnij się, że masz zainstalowane:
 
 Python 3.9+
-sprawdź swoją wersje:
+
+Jeśli Python nie jest zainstalowany:
+Pobierz go z oficjalnej strony: https://www.python.org/downloads/.
+Zainstaluj, zaznaczając opcję Add Python to PATH podczas instalacji.
+Sprawdź swoją wersje:
 ```python
 python --version
 ```
