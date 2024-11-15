@@ -3,61 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Szablon artykułu</title>
+    <title>Podgląd artykułu</title>
     <style>
+      /* Style ogólne */
       body {
         font-family: Arial, sans-serif;
         line-height: 1.6;
-        margin: 20px;
-        padding: 0;
-        background-color: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f9;
         color: #333;
       }
-      h1,
+
+      h1 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
       h2 {
-        color: #0056b3;
+        color: #34495e;
+        margin-top: 30px;
         text-align: center;
       }
+
       p {
-        line-height: 1.5;
-        color: #555;
-        text-indent: 2em;
-      }
-      article {
-        background: #fff;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 20px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-      img {
-        max-width: 100%;
-        display: block;
         margin: 10px 0;
       }
-      figcaption {
-        font-style: italic;
-        color: #555;
-        text-align: center;
-      }
-      footer {
-        margin-top: 20px;
-        font-size: 0.9em;
-        color: #777;
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 20px auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div id="article-content"></div>
-    </div>
+    <div id="article-content"></div>
 
-    <!-- Skrypt pobierający zawartość pliku artykul.html -->
     <script>
+      // Pobierz plik artykul.html i wstaw go do div#article-content
       fetch("artykul.html")
-        .then((response) => response.text())
-        .then((content) => {
-          document.getElementById("article-content").innerHTML = content;
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(
+              `Nie udało się załadować pliku: ${response.statusText}`
+            );
+          }
+          return response.text();
+        })
+        .then((html) => {
+          // Wstaw pobraną treść do kontenera
+          document.getElementById("article-content").innerHTML = html;
+        })
+        .catch((error) => {
+          console.error("Błąd:", error);
+          document.getElementById("article-content").innerHTML =
+            "<p>Nie udało się załadować artykułu. Sprawdź, czy plik <code>artykul.html</code> znajduje się w tym samym folderze.</p>";
         });
     </script>
   </body>

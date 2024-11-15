@@ -21,11 +21,16 @@ article_content = article_response.text
 # Przygotowanie promptu dla OpenAI
 prompt = f'''
 Przekształć poniższy artykuł na kod HTML zgodny z następującymi wytycznymi:
-1. Użyj odpowiednich tagów HTML do strukturyzacji treści.
-2. W miejscach, gdzie warto wstawić grafiki, oznacz je tagiem <img> z atrybutem src="image_placeholder.jpg".
-   Dodaj atrybut alt z dokładnym promptem opisującym grafikę oraz podpis pod grafiką.
-3. Nie dodawaj CSS ani JavaScript. 
-4. Kod powinien zawierać wyłącznie zawartość do wstawienia pomiędzy <body> i </body>. Nie generuj meta tagów <head></head> oraz <body></body>
+1. Pierwsze zdanie artykułu powinno zostać zawarte w tagu <h1>.
+   - Pod nagłówkiem <h1> umieść opis w postaci paragrafu oraz obraz w tagu <img>, gdzie:
+     - Atrybut src="image_placeholder.jpg" wskazuje na miejsce obrazu.
+     - Atrybut alt zawiera prompt opisujący grafikę.
+2. Tagi <h2> powinny zostać użyte dla sekcji zatytułowanych: "Wyzwania etyczne i społeczne" oraz "Automatyzacja i przyszłość rynku pracy".
+   - Pod każdym <h2> dodaj akapity z treścią oraz obraz w tagu <img> (z atrybutami src i alt).
+3. Akapity treści nieprzypisane do <h1> lub <h2> pozostaw jako zwykłe paragrafy <p>.
+4. Nie dodawaj żadnego stylu CSS ani JavaScript.
+5. Kod powinien zawierać wyłącznie zawartość, którą należy umieścić pomiędzy <body> i </body>. Nie generuj tagów <head> ani <body>.
+6. Konieczne jest wyświetlanie polskich znaków(UTF-8).
 
 Artykuł:
 {article_content}
