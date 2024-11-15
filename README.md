@@ -51,7 +51,7 @@ source venv/bin/activate
 
 Krok 3: Instalacja zależności
 
-# paste it in bash or powershell
+#code
 pip install -r requirements.txt
 
 Krok 4: Konfiguracja klucza API OpenAI
