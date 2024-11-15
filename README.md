@@ -32,9 +32,9 @@ By pobrać repozytorium z aplikacją na swój komputer, wprowadź poniższą kom
 git clone https://github.com/mateuszrosinski/recruitment-task.git
 
 Przejdź do folderu: 
-
+```bash
 cd recruitment-task
-
+```
 Krok 2: Utwórz środowisko wirtualne:
  ```python
 python -m venv venv
@@ -42,29 +42,31 @@ python -m venv venv
 Aktywuj środowisko:
 
 Jeśli używasz Windows:
-
+```
 venv\Scripts\activate
-
+```
 
 Jeśli używasz Linux/MacOS:
-
+```
 source venv/bin/activate
-
+```
 
 Krok 3: Instalacja zależności
-
+```python
 pip install -r requirements.txt
-
+```
 
 Krok 4: Konfiguracja klucza API OpenAI
 1. Utwórz plik .env w katalogu głównym projektu.
 2. Wprowadź swój klucz do API z platformy Open Ai
 
+```.env
 OPENAI_API_KEY="Twój_klucz_API"
-
+```
 
 Krok 5: Uruchomienie aplikacji
 
 Uruchom aplikację za pomocą:
-
+```python
 python task.py
+```
