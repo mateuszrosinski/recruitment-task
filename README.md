@@ -67,7 +67,7 @@ pip install -r requirements.txt
 ```
 
 Krok 4: Konfiguracja klucza API OpenAI
-1. Utwórz plik .env w katalogu głównym projektu.
+1. Utwórz plik .env w katalogu głównym projektu.(katalog recruitment-task)
 2. Wprowadź swój klucz do API z platformy Open Ai
 
 ```.env
