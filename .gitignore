@@ -1,0 +1,10 @@
+# Virtual environment
+venv/
+
+# Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables, this file contains the api code.
+.env

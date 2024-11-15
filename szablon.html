@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Szablon artykułu</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+      h1,
+      h2 {
+        color: #0056b3;
+        text-align: center;
+      }
+      p {
+        line-height: 1.5;
+        color: #555;
+        text-indent: 2em;
+      }
+      article {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      img {
+        max-width: 100%;
+        display: block;
+        margin: 10px 0;
+      }
+      figcaption {
+        font-style: italic;
+        color: #555;
+        text-align: center;
+      }
+      footer {
+        margin-top: 20px;
+        font-size: 0.9em;
+        color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="article-content"></div>
+    </div>
+
+    <!-- Skrypt pobierający zawartość pliku artykul.html -->
+    <script>
+      fetch("artykul.html")
+        .then((response) => response.text())
+        .then((content) => {
+          document.getElementById("article-content").innerHTML = content;
+        });
+    </script>
+  </body>
+</html>
