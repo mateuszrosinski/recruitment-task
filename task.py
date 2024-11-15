@@ -5,6 +5,7 @@ import os
 
 # Ustaw klucz API OpenAI
 load_dotenv()
+# Klucz api ze względów bezpieczeństwa nie zostanie wysłany na repozytorium. Są to wrażliwe dane.
 API_KEY = os.getenv("OPENAI_API_KEY")
 openai.api_key = API_KEY
 
