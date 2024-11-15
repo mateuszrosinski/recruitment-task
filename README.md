@@ -20,6 +20,7 @@ Aby uruchomić aplikację, upewnij się, że masz zainstalowane:
 
 Python 3.9+
 Pakiety Python wymienione w requirements.txt(plik znajduje się w repozytorium):
+
 openai
 requests
 python-dotenv
@@ -31,6 +32,7 @@ By pobrać repozytorium z aplikacją na swój komputer, wprowadź poniższą kom
 git clone https://github.com/mateuszrosinski/recruitment-task.git
 
 Przejdź do folderu: 
+
 cd recruitment-task
 
 Krok 2: Utwórz środowisko wirtualne:
@@ -43,19 +45,23 @@ Jeśli używasz Windows:
 
 venv\Scripts\activate
 
+
 Jeśli używasz Linux/MacOS:
 
 source venv/bin/activate
 
+
 Krok 3: Instalacja zależności
 
 pip install -r requirements.txt
+
 
 Krok 4: Konfiguracja klucza API OpenAI
 1. Utwórz plik .env w katalogu głównym projektu.
 2. Wprowadź swój klucz do API z platformy Open Ai
 
 OPENAI_API_KEY="Twój_klucz_API"
+
 
 Krok 5: Uruchomienie aplikacji
 
