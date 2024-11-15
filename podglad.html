@@ -1,16 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pogląd pliku artykul.html</title>
+    <title>Podgląd Artykułu</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f9;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      pre {
+        background: #ade3f8d7;
+        color: #080808;
+        padding: 15px;
+        border-radius: 8px;
+        overflow-x: auto;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+    </style>
   </head>
   <body>
-    <iframe
-      src="szablon.html"
-      width="100%"
-      height="100%"
-      frameborder="0"
-    ></iframe>
+    <div class="container">
+      <h1>Podgląd Pliku HTML</h1>
+      <pre id="article-content">Ładowanie zawartości pliku artykul.html...</pre>
+    </div>
+
+    <script>
+      // Pobierz zawartość pliku artykul.html
+      fetch("artykul.html")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(
+              `Nie udało się załadować pliku artykul.html: ${response.statusText}`
+            );
+          }
+          return response.text();
+        })
+        .then((data) => {
+          // Wyświetl zawartość pliku w elemencie <pre>
+          document.getElementById("article-content").textContent = data;
+        })
+        .catch((error) => {
+          // Wyświetl błąd w elemencie <pre>
+          document.getElementById(
+            "article-content"
+          ).textContent = `Błąd: ${error.message}`;
+        });
+    </script>
   </body>
 </html>
