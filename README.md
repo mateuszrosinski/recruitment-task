@@ -24,11 +24,11 @@ python --version
 ```
 Pakiety Python wymienione w requirements.txt(plik znajduje się w repozytorium):
 zawartość pliku requirements.txt
-`
+```
 openai
 requests
 python-dotenv
-`
+```
 Instrukcja instalacji:
 Krok 1: Sklonowanie repozytorium
 By pobrać repozytorium z aplikacją na swój komputer, wprowadź poniższą komendę w edytorze kodu:
