@@ -36,9 +36,9 @@ Przejdź do folderu:
 cd recruitment-task
 
 Krok 2: Utwórz środowisko wirtualne:
- 
+ ```python
 python -m venv venv
-
+```
 Aktywuj środowisko:
 
 Jeśli używasz Windows:
