@@ -29,8 +29,9 @@ Instrukcja instalacji:
 Krok 1: Sklonowanie repozytorium
 By pobrać repozytorium z aplikacją na swój komputer, wprowadź poniższą komendę w edytorze kodu:
 
+```git
 git clone https://github.com/mateuszrosinski/recruitment-task.git
-
+```
 Przejdź do folderu: 
 ```bash
 cd recruitment-task
