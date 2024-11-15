@@ -30,9 +30,9 @@ python --version
 Pakiety Python wymienione w requirements.txt(plik znajduje się w repozytorium):
 zawartość pliku requirements.txt
 ```
-openai
-requests
-python-dotenv
+openai==1.54.4
+python-dotenv==1.0.1
+requests==2.32.3
 ```
 Instrukcja instalacji:
 Krok 1: Sklonowanie repozytorium
